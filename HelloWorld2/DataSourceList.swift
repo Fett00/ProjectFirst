@@ -6,5 +6,5 @@
 //  Copyright © 2020 sdk. All rights reserved.
 //
 
-var taskListSource = ["Make a pizza"]
+var taskListSource = [Task("Make a pizza with John", "Make a Pizza")]
 var settingsListArray = ["Settings","About & Support"]

@@ -26,14 +26,13 @@ class TaskListCreateTaskViewController: UIViewController {
     
     @objc func tap(){
         if let text = textField.text{
-            taskListSource.append(text)
+            taskListSource.append(Task(text));
         }
         self.navigationController?.popToRootViewController(animated: true)
     }
     
     func confTextField(){
         view.addSubview(textField)
-        textField.textAlignment = NSTextAlignment.center
         
         textField.textAlignment = .left
         textField.isScrollEnabled = false
@@ -43,21 +42,4 @@ class TaskListCreateTaskViewController: UIViewController {
     
 
 }
-/*
- <textField
- opaque="NO"
- contentMode="scaleToFill"
- fixedFrame="YES"
- contentHorizontalAlignment="left"
- contentVerticalAlignment="center"
- borderStyle="roundedRect"
- textAlignment="natural"
- minimumFontSize="17"
- translatesAutoresizingMaskIntoConstraints="NO"
- id="IOa-7D-hW8">
- <rect key="frame" x="58" y="555" width="97" height="34"/>
- <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
- <fontDescription key="fontDescription" type="system" pointSize="14"/>
- <textInputTraits key="textInputTraits"/>
- </textField>
- */
+

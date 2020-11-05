@@ -13,7 +13,6 @@ class TasksListViewController: UIViewController{
     
     var listOfTasks = UITableView()
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .white
@@ -29,7 +28,6 @@ class TasksListViewController: UIViewController{
     
     @objc func addTapped() {
         self.navigationController?.pushViewController(TaskListCreateTaskViewController(), animated: true)
-        
     }
     
     

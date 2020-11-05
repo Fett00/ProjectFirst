@@ -11,6 +11,7 @@
 		5A46F6382545BFE200BA10AA /* TasksListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A46F6372545BFE200BA10AA /* TasksListTableViewCell.swift */; };
 		5A4FE1DD25519EEE00A464C1 /* SceneDelegatePadExtantions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A4FE1DC25519EEE00A464C1 /* SceneDelegatePadExtantions.swift */; };
 		5A4FE1E025521EC000A464C1 /* TaskListCreateTaskViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A4FE1DF25521EC000A464C1 /* TaskListCreateTaskViewController.swift */; };
+		5A59788225548373001311E2 /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A59788125548373001311E2 /* Task.swift */; };
 		5A6979A72544A4C1000250B5 /* TasksListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A6979A62544A4C1000250B5 /* TasksListViewController.swift */; };
 		5A6979AC2544A528000250B5 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A6979AB2544A528000250B5 /* SettingsViewController.swift */; };
 		5A73577725544C760018F8E7 /* TaskListViewControllerExtantions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A73577625544C760018F8E7 /* TaskListViewControllerExtantions.swift */; };
@@ -28,6 +29,7 @@
 		5A46F6372545BFE200BA10AA /* TasksListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TasksListTableViewCell.swift; sourceTree = "<group>"; };
 		5A4FE1DC25519EEE00A464C1 /* SceneDelegatePadExtantions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegatePadExtantions.swift; sourceTree = "<group>"; };
 		5A4FE1DF25521EC000A464C1 /* TaskListCreateTaskViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskListCreateTaskViewController.swift; sourceTree = "<group>"; };
+		5A59788125548373001311E2 /* Task.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = "<group>"; };
 		5A6979A62544A4C1000250B5 /* TasksListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TasksListViewController.swift; sourceTree = "<group>"; };
 		5A6979AB2544A528000250B5 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		5A73577625544C760018F8E7 /* TaskListViewControllerExtantions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskListViewControllerExtantions.swift; sourceTree = "<group>"; };
@@ -129,6 +131,7 @@
 				5AE76940253AFFC800D77C97 /* AppDelegate.swift */,
 				5ADAFF442544D09D008686A1 /* DataSourceList.swift */,
 				5A73577925544E310018F8E7 /* UIViewExtantion.swift */,
+				5A59788125548373001311E2 /* Task.swift */,
 				5ABA2517254D6C6F00806728 /* SceneDelegate */,
 				5ABA2518254D6C8500806728 /* Tasks */,
 				5ABA2519254D6C9A00806728 /* Settings */,
@@ -217,6 +220,7 @@
 				5ADAFF452544D09D008686A1 /* DataSourceList.swift in Sources */,
 				5ADAFF412544CB33008686A1 /* TaskViewController.swift in Sources */,
 				5A73577A25544E310018F8E7 /* UIViewExtantion.swift in Sources */,
+				5A59788225548373001311E2 /* Task.swift in Sources */,
 				5A73577725544C760018F8E7 /* TaskListViewControllerExtantions.swift in Sources */,
 				5A46F6342545BBC500BA10AA /* SceneDelegateExtantions.swift in Sources */,
 				5AE76943253AFFC800D77C97 /* SceneDelegate.swift in Sources */,
