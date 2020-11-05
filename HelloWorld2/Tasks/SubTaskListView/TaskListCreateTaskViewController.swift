@@ -19,22 +19,8 @@ class TaskListCreateTaskViewController: UIViewController {
         self.navigationItem.title = "Create new task"
         self.navigationItem.largeTitleDisplayMode = .always
         
-        view.addSubview(textField)
-        textField.textAlignment = NSTextAlignment.center
+        confTextField()
         
-        textField.textAlignment = .left
-        textField.isScrollEnabled = false
-        
-        
-        textField.translatesAutoresizingMaskIntoConstraints = false
-        textField.trailingAnchor.constraint(equalTo: view.trailingAnchor).isActive = true
-        textField.leadingAnchor.constraint(equalTo: view.leadingAnchor).isActive = true
-        textField.topAnchor.constraint(equalTo: view.topAnchor).isActive = true
-        textField.bottomAnchor.constraint(equalTo: view.bottomAnchor).isActive = true
-        
-        
-        
-        self.navigationController?.navigationBar.prefersLargeTitles = true
         self.navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(systemName: "plus"), style: .plain, target: self, action: #selector(tap))
     }
     
@@ -45,7 +31,16 @@ class TaskListCreateTaskViewController: UIViewController {
         self.navigationController?.popToRootViewController(animated: true)
     }
     
-
+    func confTextField(){
+        view.addSubview(textField)
+        textField.textAlignment = NSTextAlignment.center
+        
+        textField.textAlignment = .left
+        textField.isScrollEnabled = false
+        
+        textField.onAllScreen(to: textField)
+    }
+    
 
 }
 /*
