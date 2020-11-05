@@ -19,12 +19,15 @@ class TasksListViewController: UIViewController{
         confListOfTasks()
         
         self.navigationController?.navigationBar.prefersLargeTitles = true
+        
         self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Add", style: .plain, target: self, action: #selector(addTapped))
     }
     
     override func viewWillAppear(_ animated: Bool) {
         listOfTasks.reloadData()
     }
+    
+
     
     @objc func addTapped() {
         self.navigationController?.pushViewController(TaskListCreateTaskViewController(), animated: true)

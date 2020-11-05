@@ -20,5 +20,6 @@ class Task{
         self.textTask = text ?? "EMPTY_VALUE"
         self.lableTask = lable
     }
+    func lol(){}
     
 }
