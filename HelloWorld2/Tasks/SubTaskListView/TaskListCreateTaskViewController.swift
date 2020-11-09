@@ -21,10 +21,10 @@ class TaskListCreateTaskViewController: UIViewController {
         
         confTextField()
         
-        self.navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(systemName: "plus"), style: .plain, target: self, action: #selector(tap))
+        self.navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(systemName: "plus"), style: .plain, target: self, action: #selector(tapOnAdded))
     }
     
-    @objc func tap(){
+    @objc func tapOnAdded(){
         if let text = textField.text{
             taskListSource.append(Task(text));
         }
@@ -38,7 +38,7 @@ class TaskListCreateTaskViewController: UIViewController {
         textField.textAlignment = .left
         textField.isScrollEnabled = false
         
-        textField.onAllScreen(to: textField)
+        textField.onAllScreen(to: textField,trailingConst: 19.0,leadingConst: 19.0)
     }
     
 

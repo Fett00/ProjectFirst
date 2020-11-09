@@ -16,7 +16,7 @@ class SettingsViewController: UIViewController {
         super.viewDidLoad()
         confSettingsList()
         view.backgroundColor = .white
-        self.navigationController?.navigationBar.prefersLargeTitles = true
+        
     }
     
     func confSettingsList(){
@@ -25,14 +25,9 @@ class SettingsViewController: UIViewController {
         settingsList.delegate = self
         settingsList.dataSource = self
         settingsList.register(UITableViewCell.self, forCellReuseIdentifier: "SettingsCell")
-    
-        
-        settingsList.translatesAutoresizingMaskIntoConstraints = false
-        settingsList.trailingAnchor.constraint(equalTo: view.trailingAnchor).isActive = true
-        settingsList.leadingAnchor.constraint(equalTo: view.leadingAnchor).isActive = true
-        settingsList.topAnchor.constraint(equalTo: view.topAnchor).isActive = true
-        settingsList.bottomAnchor.constraint(equalTo: view.bottomAnchor).isActive = true
-        
+        settingsList.rowHeight = 100
+        settingsList.onAllScreen(to: settingsList)
+        settingsList.tableFooterView = UIView()
         
        
         

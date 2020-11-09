@@ -31,6 +31,6 @@ class TasksListTableViewCell: UITableViewCell {
 
 class TableViewCell: UITableViewCell {
 
-
+    
     
 }

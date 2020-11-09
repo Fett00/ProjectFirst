@@ -15,6 +15,7 @@ extension SceneDelegate{
     func createSettingsNC() -> UINavigationController {
         let settingsVC = SettingsViewController()
         settingsVC.title = "Settings"
+        settingsVC.navigationController?.navigationBar.prefersLargeTitles = true
         settingsVC.tabBarItem = UITabBarItem(title: "Settings", image: UIImage(systemName:"slider.horizontal.3"),tag:1)
         return UINavigationController(rootViewController: settingsVC)
     }

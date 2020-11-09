@@ -11,7 +11,7 @@ import UIKit
 
 extension TasksListViewController: UITableViewDelegate, UITableViewDataSource{
     
-    
+    // Cells for Table View
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return taskListSource.count
     }
@@ -28,6 +28,10 @@ extension TasksListViewController: UITableViewDelegate, UITableViewDataSource{
         self.navigationController?.pushViewController(TaskViewController(text: taskListSource[indexPath.row].textTask), animated: true)
     }
 
+    
+    
+    //CONFIGURATE TABLE VIEW
+    
     func confListOfTasks(){
         view.addSubview(listOfTasks)
         self.listOfTasks.register(TableViewCell.self, forCellReuseIdentifier: "TableViewCell")
@@ -35,6 +39,7 @@ extension TasksListViewController: UITableViewDelegate, UITableViewDataSource{
         listOfTasks.dataSource = self
         listOfTasks.rowHeight = 100
         listOfTasks.onAllScreen(to: listOfTasks)
+        listOfTasks.tableFooterView = UIView()
     }
     
     
