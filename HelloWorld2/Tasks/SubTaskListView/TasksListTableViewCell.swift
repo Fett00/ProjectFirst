@@ -7,14 +7,14 @@
 //
 
 import UIKit
-/*
+
 class TasksListTableViewCell: UITableViewCell {
 
-    var cellLable = UILabel()
+    var cellArticleLable = UILabel()
+    var cellTextLable = UILabel()
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
-        addSubview(cellLable)
         confCellLable()
     }
     
@@ -23,14 +23,9 @@ class TasksListTableViewCell: UITableViewCell {
     }
     
     func confCellLable() {
-        cellLable.adjustsFontSizeToFitWidth = true
+        self.addSubview(cellTextLable)
+        self.addSubview(cellArticleLable)
     }
     
 }
- */
 
-class TableViewCell: UITableViewCell {
-
-    
-    
-}

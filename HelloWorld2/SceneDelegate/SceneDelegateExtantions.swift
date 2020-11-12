@@ -22,7 +22,7 @@ extension SceneDelegate{
     
     func createTabBar() -> UITabBarController {
         let tabBar = UITabBarController()
-        UITabBar.appearance().tintColor = .systemGreen
+        //UITabBar.appearance().tintColor = .systemGreen
         tabBar.viewControllers = [createTasksListNC(),createSettingsNC()]
         return tabBar
     }

@@ -19,16 +19,16 @@ class TasksListViewController: UIViewController{
         confListOfTasks()
         self.navigationController?.navigationBar.prefersLargeTitles = true
         self.navigationItem.largeTitleDisplayMode = .always
-
         
         self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Add", style: .plain, target: self, action: #selector(tapToAdd))
+        
     }
     
     override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
         listOfTasks.reloadData()
         self.navigationItem.largeTitleDisplayMode = .always
     }
-    
 
     
     @objc func tapToAdd() {

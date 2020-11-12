@@ -20,12 +20,13 @@ extension TasksListViewController: UITableViewDelegate, UITableViewDataSource{
         let cell = self.listOfTasks.dequeueReusableCell(withIdentifier: "TableViewCell", for: indexPath)
         cell.textLabel?.numberOfLines = 4
         cell.textLabel?.text = taskListSource[indexPath.row].textTask
+        
         return cell
         
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        self.navigationController?.pushViewController(TaskViewController(text: taskListSource[indexPath.row].textTask), animated: true)
+        self.navigationController?.pushViewController(TaskViewController(text: taskListSource[indexPath.row].textTask,lable: taskListSource[indexPath.row].lableTask), animated: true)
     }
 
     
@@ -34,7 +35,7 @@ extension TasksListViewController: UITableViewDelegate, UITableViewDataSource{
     
     func confListOfTasks(){
         view.addSubview(listOfTasks)
-        self.listOfTasks.register(TableViewCell.self, forCellReuseIdentifier: "TableViewCell")
+        self.listOfTasks.register(TasksListTableViewCell.self, forCellReuseIdentifier: "TableViewCell")
         listOfTasks.delegate = self
         listOfTasks.dataSource = self
         listOfTasks.rowHeight = 100

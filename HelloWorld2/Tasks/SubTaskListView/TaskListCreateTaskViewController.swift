@@ -10,23 +10,31 @@ import UIKit
 
 class TaskListCreateTaskViewController: UIViewController {
     
-    let textField = UITextView(frame: .zero)
+    let textField = UITextView()
+    let articleField = UITextField()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .white
-        
         self.navigationItem.title = "Create new task"
-        self.navigationItem.largeTitleDisplayMode = .always
         
+        confArticleField()
         confTextField()
+
         
         self.navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(systemName: "plus"), style: .plain, target: self, action: #selector(tapOnAdded))
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.navigationItem.largeTitleDisplayMode = .never
+    }
+    
     @objc func tapOnAdded(){
         if let text = textField.text{
-            taskListSource.append(Task(text));
+            if let article = articleField.text{
+                taskListSource.append(Task(text, article))
+            }
         }
         self.navigationController?.popToRootViewController(animated: true)
     }
@@ -37,8 +45,22 @@ class TaskListCreateTaskViewController: UIViewController {
         
         textField.textAlignment = .left
         textField.isScrollEnabled = false
+        textField.font = UIFont(name: "Helvetica", size: UIFont.labelFontSize)
+        //textField.onAllScreen(to: textField,trailingConst: 19.0,leadingConst: 19.0)
+        textField.frame = CGRect(x: articleField.frame.minX, y: articleField.frame.maxY, width: (self.navigationController?.navigationBar.frame.width)!, height: 500)
+    }
+    
+    func confArticleField(){
+        view.addSubview(articleField)
+        articleField.frame = CGRect(x: 0, y: (self.navigationController?.navigationBar.frame.height)!+40, width: (self.navigationController?.navigationBar.frame.width)!, height: 80)
+        articleField.trailingAnchor.constraint(equalTo: articleField.trailingAnchor,constant: -19).isActive = true
+        articleField.leadingAnchor.constraint(equalTo: articleField.leadingAnchor,constant: 19).isActive = true
         
-        textField.onAllScreen(to: textField,trailingConst: 19.0,leadingConst: 19.0)
+        articleField.font = UIFont(name: "Helvetica-bold", size: 30)
+        articleField.adjustsFontSizeToFitWidth = true
+        articleField.placeholder = "Place"
+
+        
     }
     
 

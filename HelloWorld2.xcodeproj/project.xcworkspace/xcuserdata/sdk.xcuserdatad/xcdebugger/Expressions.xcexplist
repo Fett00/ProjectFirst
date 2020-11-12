@@ -3,6 +3,25 @@
    version = "1.0">
    <ContextStates>
       <ContextState
+         contextName = "TaskViewController.viewDidLoad():TaskViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "butt.topAnchor.constraint(equalTo: self.navigationController?.navigationBar.bottomAnchor ?? NSLayoutYAxisAnchor())">
+            </PersistentString>
+            <PersistentString
+               value = "butt.leadingAnchor.constraint(equalTo: view.leadingAnchor)">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "TaskViewController.viewWillAppear(_:):TaskViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "taskListSource[0].date">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
          contextName = "TaskListCreateTaskViewController.viewDidLoad():TaskListCreateTaskViewController.swift">
          <PersistentStrings>
             <PersistentString
@@ -29,6 +48,14 @@
          <PersistentStrings>
             <PersistentString
                value = "animalsList">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "TaskViewController.confLableView():TaskViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "lableView.font.name">
             </PersistentString>
          </PersistentStrings>
       </ContextState>

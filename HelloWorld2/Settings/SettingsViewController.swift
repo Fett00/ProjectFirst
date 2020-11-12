@@ -19,6 +19,12 @@ class SettingsViewController: UIViewController {
         
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.navigationItem.largeTitleDisplayMode = .always
+    }
+    
+    
     func confSettingsList(){
         view.addSubview(settingsList)
         

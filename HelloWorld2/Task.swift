@@ -12,6 +12,7 @@ class Task{
     
     var textTask = "EMPTY_VALUE"
     var lableTask = "EMPTY_VALUE"
+    var date = "1 января 2000 00:00"
     
     init() {
     }
@@ -19,7 +20,12 @@ class Task{
     init(_ text:String?,_ lable:String = "") {
         self.textTask = text ?? "EMPTY_VALUE"
         self.lableTask = lable
+        self.date = getCurrentDate()
     }
-    func lol(){}
+    
+    func getCurrentDate() -> String{
+        let dated = Calendar.current.dateComponents([.year,.month,.day, .hour, .minute], from: Date())
+        return (String(dated.year!)+"."+String(dated.month!)+"."+String(dated.day!)+" "+String(dated.hour!)+":"+(String(dated.minute!).count == 1 ? "0" + String(dated.minute!) : String(dated.minute!)))
+    }
     
 }
