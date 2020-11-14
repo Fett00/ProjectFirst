@@ -12,7 +12,7 @@ class Task{
     
     var textTask = "EMPTY_VALUE"
     var lableTask = "EMPTY_VALUE"
-    var date = "1 января 2000 00:00"
+    var date = "1.01.2000 00:00"
     
     init() {
     }

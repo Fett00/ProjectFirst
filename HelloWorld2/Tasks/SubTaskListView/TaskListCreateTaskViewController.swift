@@ -15,6 +15,13 @@ class TaskListCreateTaskViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.navigationItem.largeTitleDisplayMode = .never
+        
         view.backgroundColor = .white
         self.navigationItem.title = "Create new task"
         
@@ -23,11 +30,6 @@ class TaskListCreateTaskViewController: UIViewController {
 
         
         self.navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(systemName: "plus"), style: .plain, target: self, action: #selector(tapOnAdded))
-    }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        self.navigationItem.largeTitleDisplayMode = .never
     }
     
     @objc func tapOnAdded(){
@@ -52,13 +54,13 @@ class TaskListCreateTaskViewController: UIViewController {
     
     func confArticleField(){
         view.addSubview(articleField)
-        articleField.frame = CGRect(x: 0, y: (self.navigationController?.navigationBar.frame.height)!+40, width: (self.navigationController?.navigationBar.frame.width)!, height: 80)
+        articleField.frame = CGRect(x: 0, y: (self.navigationController?.navigationBar.frame.height)!+35, width: (self.navigationController?.navigationBar.frame.width)!, height: 80)
         articleField.trailingAnchor.constraint(equalTo: articleField.trailingAnchor,constant: -19).isActive = true
         articleField.leadingAnchor.constraint(equalTo: articleField.leadingAnchor,constant: 19).isActive = true
         
         articleField.font = UIFont(name: "Helvetica-bold", size: 30)
         articleField.adjustsFontSizeToFitWidth = true
-        articleField.placeholder = "Place"
+        articleField.placeholder = "Article"
 
         
     }

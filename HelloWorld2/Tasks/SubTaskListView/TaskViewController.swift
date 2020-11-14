@@ -10,36 +10,32 @@ import UIKit
 
 class TaskViewController: UIViewController{
     
-    let lableView = UITextView()
-    var taskText = ""
-    var lableText = ""
+    let textView = UITextView()
     let artic = UITextField()
+    let dateText = UITextField()
+    
+    var taskView:Task
+    
 
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .white
-        confArticleLableView()
-        confLableView()
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         self.navigationItem.largeTitleDisplayMode = .never
+        
+        view.backgroundColor = .white
+        
+        confDateTextView()
+        confArticleLableView()
+        confTextView()
     }
     
-    @objc func backWSave(){
-        for i in taskListSource{
-            if i.textTask == taskText{
-                i.textTask = lableView.text
-            }
-        }
-        self.navigationController?.popToRootViewController(animated: true)
-    }
-    
-    init(text:String,lable:String) {
-        taskText = text
-        lableText = lable
+    init(_ task:Task) {
+        
+        taskView = task
         super.init(nibName: nil, bundle: nil)
     }
     
@@ -48,33 +44,45 @@ class TaskViewController: UIViewController{
     }
     
     
-    func confLableView(){
-        view.addSubview(lableView)
+    func confTextView(){
+        view.addSubview(textView)
 
         
-        lableView.textAlignment = .left
-        lableView.isScrollEnabled = false
+        textView.textAlignment = .left
+        textView.isScrollEnabled = false
+        textView.isSelectable = false
         //lableView.onAllScreen(to: lableView,trailingConst: 19.0,leadingConst: 19.0)
         //view.safeAreaLayoutGuide.topAnchor.constraint(equalTo: lableView.topAnchor).isActive = true
-        lableView.frame = CGRect(x: artic.frame.minX, y: artic.frame.maxY, width: (self.navigationController?.navigationBar.frame.width)!, height: 500)
+        textView.frame = CGRect(x: artic.frame.minX, y: artic.frame.maxY, width: (self.navigationController?.navigationBar.frame.width)!, height: 500)
         
-        lableView.font = UIFont(name: "Helvetica", size: UIFont.labelFontSize)
-        lableView.text = taskText
-        
+        textView.font = UIFont(name: "Helvetica", size: UIFont.labelFontSize)
+        textView.text = taskView.textTask
         
     }
     
     func confArticleLableView(){
         view.addSubview(artic)
-        artic.frame = CGRect(x: 0, y: (self.navigationController?.navigationBar.frame.height)!+40, width: (self.navigationController?.navigationBar.frame.width)!, height: 80)
-        artic.trailingAnchor.constraint(equalTo: artic.trailingAnchor,constant: -19).isActive = true
-        artic.leadingAnchor.constraint(equalTo: artic.leadingAnchor,constant: 19).isActive = true
         
+        artic.isEnabled = false
+        artic.frame = CGRect(x: dateText.frame.minX, y: dateText.frame.maxY, width: (self.navigationController?.navigationBar.frame.width)!, height: dateText.font!.lineHeight + 5)
+
         artic.font = UIFont(name: "Helvetica-bold", size: 30)
         artic.adjustsFontSizeToFitWidth = true
         artic.isSelected = false
-        artic.text = lableText
+        artic.text = taskView.lableTask
+        //artic.backgroundColor = .blue
         
+    }
+    
+    func confDateTextView() {
+        view.addSubview(dateText)
+        dateText.textAlignment = .center
+        dateText.isEnabled = false
+        dateText.frame = CGRect(x: 0, y: (self.navigationController?.navigationBar.frame.height)!+45, width: (self.navigationController?.navigationBar.frame.width)!, height: dateText.font!.lineHeight+15)
+        //dateText.font = UIFont(name: "Helvetica")
+        dateText.textColor = .systemGray
+        //dateText.backgroundColor = .cyan
+        dateText.text = taskView.date
     }
     
 

@@ -26,7 +26,7 @@ extension TasksListViewController: UITableViewDelegate, UITableViewDataSource{
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        self.navigationController?.pushViewController(TaskViewController(text: taskListSource[indexPath.row].textTask,lable: taskListSource[indexPath.row].lableTask), animated: true)
+        self.navigationController?.pushViewController(TaskViewController(taskListSource[indexPath.row]), animated: true)
     }
 
     
