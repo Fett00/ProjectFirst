@@ -10,9 +10,9 @@ import UIKit
 
 class TaskViewController: UIViewController{
     
-    let textView = UITextView()
+    let textView = UITextView(frame: .zero)
     let artic = UITextField()
-    let dateText = UITextField()
+    let dateText = UITextField(frame: .zero)
     
     var taskView:Task
     
@@ -51,11 +51,16 @@ class TaskViewController: UIViewController{
         textView.textAlignment = .left
         textView.isScrollEnabled = false
         textView.isSelectable = false
-        //lableView.onAllScreen(to: lableView,trailingConst: 19.0,leadingConst: 19.0)
-        //view.safeAreaLayoutGuide.topAnchor.constraint(equalTo: lableView.topAnchor).isActive = true
-        textView.frame = CGRect(x: artic.frame.minX, y: artic.frame.maxY, width: (self.navigationController?.navigationBar.frame.width)!, height: 500)
-        
         textView.font = UIFont(name: "Helvetica", size: UIFont.labelFontSize)
+        
+        NSLayoutConstraint.activate([
+        textView.centerXAnchor.constraint(equalTo: view.safeAreaLayoutGuide.centerXAnchor),
+        textView.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor,constant: 10),
+        textView.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor,constant: -10),
+        textView.topAnchor.constraint(equalTo: artic.bottomAnchor,constant: 10)])
+        textView.translatesAutoresizingMaskIntoConstraints = false
+        
+        
         textView.text = taskView.textTask
         
     }
@@ -64,13 +69,21 @@ class TaskViewController: UIViewController{
         view.addSubview(artic)
         
         artic.isEnabled = false
-        artic.frame = CGRect(x: dateText.frame.minX, y: dateText.frame.maxY, width: (self.navigationController?.navigationBar.frame.width)!, height: dateText.font!.lineHeight + 5)
 
         artic.font = UIFont(name: "Helvetica-bold", size: 30)
         artic.adjustsFontSizeToFitWidth = true
         artic.isSelected = false
+        
+        NSLayoutConstraint.activate([
+        artic.centerXAnchor.constraint(equalTo: view.safeAreaLayoutGuide.centerXAnchor),
+        artic.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor,constant: 10),
+        artic.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor,constant: -10),
+        artic.topAnchor.constraint(equalTo: dateText.bottomAnchor,constant: 10)])
+        artic.translatesAutoresizingMaskIntoConstraints = false
+        
+        
         artic.text = taskView.lableTask
-        //artic.backgroundColor = .blue
+        
         
     }
     
@@ -78,11 +91,17 @@ class TaskViewController: UIViewController{
         view.addSubview(dateText)
         dateText.textAlignment = .center
         dateText.isEnabled = false
-        dateText.frame = CGRect(x: 0, y: (self.navigationController?.navigationBar.frame.height)!+45, width: (self.navigationController?.navigationBar.frame.width)!, height: dateText.font!.lineHeight+15)
-        //dateText.font = UIFont(name: "Helvetica")
         dateText.textColor = .systemGray
-        //dateText.backgroundColor = .cyan
+        
+        NSLayoutConstraint.activate([
+        dateText.centerXAnchor.constraint(equalTo: view.safeAreaLayoutGuide.centerXAnchor),
+        dateText.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor,constant: 10),
+        dateText.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor,constant: -10),
+        dateText.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor,constant: 10)])
+        dateText.translatesAutoresizingMaskIntoConstraints = false
+        
         dateText.text = taskView.date
+        
     }
     
 

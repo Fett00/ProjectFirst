@@ -3,6 +3,17 @@
    version = "1.0">
    <ContextStates>
       <ContextState
+         contextName = "TaskViewController.confDateTextView():TaskViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "dateText.topAnchor">
+            </PersistentString>
+            <PersistentString
+               value = "dateText.frame">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
          contextName = "TaskViewController.viewDidLoad():TaskViewController.swift">
          <PersistentStrings>
             <PersistentString

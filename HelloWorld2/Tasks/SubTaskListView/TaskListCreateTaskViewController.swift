@@ -48,19 +48,31 @@ class TaskListCreateTaskViewController: UIViewController {
         textField.textAlignment = .left
         textField.isScrollEnabled = false
         textField.font = UIFont(name: "Helvetica", size: UIFont.labelFontSize)
-        //textField.onAllScreen(to: textField,trailingConst: 19.0,leadingConst: 19.0)
-        textField.frame = CGRect(x: articleField.frame.minX, y: articleField.frame.maxY, width: (self.navigationController?.navigationBar.frame.width)!, height: 500)
+        
+        
+        NSLayoutConstraint.activate([
+                                        textField.centerXAnchor.constraint(equalTo: view.safeAreaLayoutGuide.centerXAnchor),
+                                        textField.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor,constant: 10),
+                                        textField.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor,constant: -10),
+                                        textField.topAnchor.constraint(equalTo: articleField.bottomAnchor,constant: 10)])
+        textField.translatesAutoresizingMaskIntoConstraints = false
+
     }
     
     func confArticleField(){
         view.addSubview(articleField)
-        articleField.frame = CGRect(x: 0, y: (self.navigationController?.navigationBar.frame.height)!+35, width: (self.navigationController?.navigationBar.frame.width)!, height: 80)
-        articleField.trailingAnchor.constraint(equalTo: articleField.trailingAnchor,constant: -19).isActive = true
-        articleField.leadingAnchor.constraint(equalTo: articleField.leadingAnchor,constant: 19).isActive = true
         
         articleField.font = UIFont(name: "Helvetica-bold", size: 30)
         articleField.adjustsFontSizeToFitWidth = true
         articleField.placeholder = "Article"
+        articleField.becomeFirstResponder()
+        
+        NSLayoutConstraint.activate([
+        articleField.centerXAnchor.constraint(equalTo: view.safeAreaLayoutGuide.centerXAnchor),
+        articleField.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor,constant: 10),
+        articleField.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor,constant: -10),
+        articleField.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor,constant: 10)])
+        articleField.translatesAutoresizingMaskIntoConstraints = false
 
         
     }
