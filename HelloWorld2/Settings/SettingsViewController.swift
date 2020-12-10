@@ -31,7 +31,7 @@ class SettingsViewController: UIViewController {
         settingsList.delegate = self
         settingsList.dataSource = self
         settingsList.register(UITableViewCell.self, forCellReuseIdentifier: "SettingsCell")
-        settingsList.rowHeight = 100
+        settingsList.rowHeight = 50
         settingsList.onAllScreen(to: settingsList)
         settingsList.tableFooterView = UIView()
         
@@ -57,6 +57,17 @@ extension SettingsViewController: UITableViewDelegate, UITableViewDataSource{
         return cell
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        switch indexPath.row {
+        case 0:
+            self.navigationController?.pushViewController(SetViewController(), animated: true)
+        case 1:
+            self.navigationController?.pushViewController(AboutViewController(), animated: true)
+        default: break
+            
+        }
+        
+    }
     
 }
 

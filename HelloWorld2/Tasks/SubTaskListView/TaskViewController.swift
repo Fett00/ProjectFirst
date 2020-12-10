@@ -57,12 +57,10 @@ class TaskViewController: UIViewController{
         textView.centerXAnchor.constraint(equalTo: view.safeAreaLayoutGuide.centerXAnchor),
         textView.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor,constant: 10),
         textView.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor,constant: -10),
-        textView.topAnchor.constraint(equalTo: artic.bottomAnchor,constant: 10)])
+        textView.topAnchor.constraint(equalTo: artic.bottomAnchor)])
         textView.translatesAutoresizingMaskIntoConstraints = false
         
-        
         textView.text = taskView.textTask
-        
     }
     
     func confArticleLableView(){
@@ -76,14 +74,12 @@ class TaskViewController: UIViewController{
         
         NSLayoutConstraint.activate([
         artic.centerXAnchor.constraint(equalTo: view.safeAreaLayoutGuide.centerXAnchor),
-        artic.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor,constant: 10),
+        artic.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor,constant: 14),
         artic.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor,constant: -10),
-        artic.topAnchor.constraint(equalTo: dateText.bottomAnchor,constant: 10)])
+        artic.topAnchor.constraint(equalTo: dateText.bottomAnchor,constant: 5)])
         artic.translatesAutoresizingMaskIntoConstraints = false
         
-        
         artic.text = taskView.lableTask
-        
         
     }
     
@@ -97,7 +93,7 @@ class TaskViewController: UIViewController{
         dateText.centerXAnchor.constraint(equalTo: view.safeAreaLayoutGuide.centerXAnchor),
         dateText.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor,constant: 10),
         dateText.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor,constant: -10),
-        dateText.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor,constant: 10)])
+        dateText.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor,constant: 5)])
         dateText.translatesAutoresizingMaskIntoConstraints = false
         
         dateText.text = taskView.date

@@ -48,13 +48,14 @@ class TaskListCreateTaskViewController: UIViewController {
         textField.textAlignment = .left
         textField.isScrollEnabled = false
         textField.font = UIFont(name: "Helvetica", size: UIFont.labelFontSize)
-        
+        textField.backgroundColor = .brown
         
         NSLayoutConstraint.activate([
-                                        textField.centerXAnchor.constraint(equalTo: view.safeAreaLayoutGuide.centerXAnchor),
-                                        textField.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor,constant: 10),
-                                        textField.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor,constant: -10),
-                                        textField.topAnchor.constraint(equalTo: articleField.bottomAnchor,constant: 10)])
+        textField.centerXAnchor.constraint(equalTo: view.safeAreaLayoutGuide.centerXAnchor),
+        textField.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor,constant: 10),
+        textField.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor,constant: -10),
+        textField.topAnchor.constraint(equalTo: articleField.bottomAnchor,constant: 5)])
+        
         textField.translatesAutoresizingMaskIntoConstraints = false
 
     }

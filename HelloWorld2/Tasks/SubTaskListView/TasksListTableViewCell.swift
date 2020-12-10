@@ -12,6 +12,7 @@ class TasksListTableViewCell: UITableViewCell {
 
     var cellArticleLable = UILabel()
     var cellTextLable = UILabel()
+    var cellDateLable = UILabel()
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
@@ -25,6 +26,29 @@ class TasksListTableViewCell: UITableViewCell {
     func confCellLable() {
         self.addSubview(cellTextLable)
         self.addSubview(cellArticleLable)
+        self.addSubview(cellDateLable)
+        
+        cellArticleLable.font = UIFont(name: "Helvetica-bold", size: 30)
+        cellDateLable.textColor = .systemGray
+        
+        NSLayoutConstraint.activate([
+            cellArticleLable.topAnchor.constraint(equalTo: self.topAnchor,constant: 10),
+            cellArticleLable.leadingAnchor.constraint(equalTo: self.leadingAnchor,constant: 10),
+            cellArticleLable.trailingAnchor.constraint(equalTo: self.trailingAnchor,constant: -10),
+            
+            cellTextLable.topAnchor.constraint(equalTo: cellArticleLable.bottomAnchor),
+            cellTextLable.leadingAnchor.constraint(equalTo: self.leadingAnchor,constant: 10),
+            cellTextLable.trailingAnchor.constraint(equalTo: self.trailingAnchor,constant: -10),
+
+            
+            cellDateLable.topAnchor.constraint(equalTo: cellTextLable.bottomAnchor),
+            cellDateLable.leadingAnchor.constraint(equalTo: self.leadingAnchor,constant: 10),
+            cellDateLable.trailingAnchor.constraint(equalTo: self.trailingAnchor,constant: -10)
+        ])
+        
+        cellTextLable.translatesAutoresizingMaskIntoConstraints = false
+        cellArticleLable.translatesAutoresizingMaskIntoConstraints = false
+        cellDateLable.translatesAutoresizingMaskIntoConstraints = false
     }
     
 }

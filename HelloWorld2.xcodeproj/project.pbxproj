@@ -17,6 +17,8 @@
 		5A6979AC2544A528000250B5 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A6979AB2544A528000250B5 /* SettingsViewController.swift */; };
 		5A73577725544C760018F8E7 /* TaskListViewControllerExtantions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A73577625544C760018F8E7 /* TaskListViewControllerExtantions.swift */; };
 		5A73577A25544E310018F8E7 /* UIViewExtantion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A73577925544E310018F8E7 /* UIViewExtantion.swift */; };
+		5A9D9F9E258280E4001CADF9 /* SetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A9D9F9D258280E4001CADF9 /* SetViewController.swift */; };
+		5A9D9FA1258280F2001CADF9 /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A9D9FA0258280F2001CADF9 /* AboutViewController.swift */; };
 		5ADAFF412544CB33008686A1 /* TaskViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ADAFF402544CB33008686A1 /* TaskViewController.swift */; };
 		5ADAFF452544D09D008686A1 /* DataSourceList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ADAFF442544D09D008686A1 /* DataSourceList.swift */; };
 		5AE76941253AFFC800D77C97 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AE76940253AFFC800D77C97 /* AppDelegate.swift */; };
@@ -36,6 +38,8 @@
 		5A6979AB2544A528000250B5 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		5A73577625544C760018F8E7 /* TaskListViewControllerExtantions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskListViewControllerExtantions.swift; sourceTree = "<group>"; };
 		5A73577925544E310018F8E7 /* UIViewExtantion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtantion.swift; sourceTree = "<group>"; };
+		5A9D9F9D258280E4001CADF9 /* SetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetViewController.swift; sourceTree = "<group>"; };
+		5A9D9FA0258280F2001CADF9 /* AboutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
 		5ADAFF402544CB33008686A1 /* TaskViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskViewController.swift; sourceTree = "<group>"; };
 		5ADAFF442544D09D008686A1 /* DataSourceList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataSourceList.swift; sourceTree = "<group>"; };
 		5AE7693D253AFFC800D77C97 /* HelloWorld2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HelloWorld2.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -107,6 +111,8 @@
 			isa = PBXGroup;
 			children = (
 				5A6979AB2544A528000250B5 /* SettingsViewController.swift */,
+				5A9D9F9D258280E4001CADF9 /* SetViewController.swift */,
+				5A9D9FA0258280F2001CADF9 /* AboutViewController.swift */,
 			);
 			path = Settings;
 			sourceTree = "<group>";
@@ -219,6 +225,7 @@
 				5A46F6382545BFE200BA10AA /* TasksListTableViewCell.swift in Sources */,
 				5AE76941253AFFC800D77C97 /* AppDelegate.swift in Sources */,
 				5A6979A72544A4C1000250B5 /* TasksListViewController.swift in Sources */,
+				5A9D9FA1258280F2001CADF9 /* AboutViewController.swift in Sources */,
 				5A4FE1DD25519EEE00A464C1 /* SceneDelegatePadExtantions.swift in Sources */,
 				5A4FE1E025521EC000A464C1 /* TaskListCreateTaskViewController.swift in Sources */,
 				5ADAFF452544D09D008686A1 /* DataSourceList.swift in Sources */,
@@ -227,6 +234,7 @@
 				5A59788225548373001311E2 /* Task.swift in Sources */,
 				5A73577725544C760018F8E7 /* TaskListViewControllerExtantions.swift in Sources */,
 				5A46F6342545BBC500BA10AA /* SceneDelegateExtantions.swift in Sources */,
+				5A9D9F9E258280E4001CADF9 /* SetViewController.swift in Sources */,
 				5AE76943253AFFC800D77C97 /* SceneDelegate.swift in Sources */,
 				5A6979AC2544A528000250B5 /* SettingsViewController.swift in Sources */,
 			);

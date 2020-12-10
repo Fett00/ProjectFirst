@@ -22,10 +22,10 @@ extension UIView{
     func onAllScreen(to superView:UIView,trailingConst left:Float=0.0,leadingConst right:Float=0.0,topConst top:Float=0.0,buttomConst buttom:Float=0.0) {
         
         translatesAutoresizingMaskIntoConstraints                                 = false
-        leadingAnchor.constraint(equalTo: superview!.leadingAnchor,constant: CGFloat(right)).isActive      = true
-        trailingAnchor.constraint(equalTo: superview!.trailingAnchor, constant: CGFloat(-left)).isActive    = true
-        topAnchor.constraint(equalTo: superview!.topAnchor, constant: CGFloat(top)).isActive              = true
-        bottomAnchor.constraint(equalTo: superview!.bottomAnchor, constant: CGFloat(-buttom)).isActive        = true
+        leadingAnchor.constraint(equalTo: superview!.safeAreaLayoutGuide.leadingAnchor,constant: CGFloat(right)).isActive      = true
+        trailingAnchor.constraint(equalTo: superview!.safeAreaLayoutGuide.trailingAnchor, constant: CGFloat(-left)).isActive    = true
+        topAnchor.constraint(equalTo: superview!.safeAreaLayoutGuide.topAnchor, constant: CGFloat(top)).isActive              = true
+        bottomAnchor.constraint(equalTo: superview!.safeAreaLayoutGuide.bottomAnchor, constant: CGFloat(-buttom)).isActive        = true
     }
     
 }

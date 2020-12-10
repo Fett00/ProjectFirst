@@ -17,12 +17,12 @@ extension TasksListViewController: UITableViewDelegate, UITableViewDataSource{
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = self.listOfTasks.dequeueReusableCell(withIdentifier: "TableViewCell", for: indexPath)
-        cell.textLabel?.numberOfLines = 4
-        cell.textLabel?.text = taskListSource[indexPath.row].textTask
+        let cell = self.listOfTasks.dequeueReusableCell(withIdentifier: "TableViewCell", for: indexPath) as! TasksListTableViewCell
+        cell.cellArticleLable.text = taskListSource[indexPath.row].lableTask
+        cell.cellTextLable.text = taskListSource[indexPath.row].textTask
+        cell.cellDateLable.text = taskListSource[indexPath.row].date
         
         return cell
-        
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
